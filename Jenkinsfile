@@ -35,7 +35,7 @@ pipeline {
                 echo 'Running SonarQube analysis'
 
                 withSonarQubeEnv('SonarQube') {
-                    bat 'mvn sonar:sonar -Dsonar.projectKey=jenkins-project2 -Dsonar.projectName="Jenkins Project 2"'
+                    bat 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=jenkins-project2 -Dsonar.projectName="Jenkins Project 2"'
                 }
             }
         }
